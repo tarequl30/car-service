@@ -1,0 +1,14 @@
+.frontLine h1 {
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.frontLine p {
+    font: 1.2em sans-serif;
+}
+
+.frontPart {
+    background-image: url(../../../images/auto-mechanic-working-garage-repair-service.jpg);
+    background-size: cover;
+    height: 650px;
+}
