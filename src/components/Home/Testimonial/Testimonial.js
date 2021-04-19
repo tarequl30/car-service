@@ -1,17 +1,16 @@
 import React from 'react';
 
 const Testimonial = (props) => {
-    const {quote,name,from ,img} = props.testimonial;
+    const {review,name,imgURL} = props.testimonial;
     return (
-        <div className="card shadow-sm row col-md-4">
+        <div className="card shadow-sm col-md-4">
             <div className="card-body">
-                <p className="card-text text-center">{quote}</p>
+                <p className="card-text text-center">{review}</p>
             </div>
             <div className="card-footer d-flex  align-items-center col-md-4">
-                <img className="mx-3" src={img} alt="" width="100%"/>
+                <img className="mx-3 ms-5" src={imgURL} alt="" width="100%"/>
+                <h6 className="text-primary">{name}</h6>
                 <div className="col-md-4">
-                    <h6 className="text-primary">{name}</h6>
-                    {/* <p className="m-0">{from}</p> */}
                 </div>
             </div>
        </div>

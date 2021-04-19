@@ -1,32 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import serviceImg from '../../../images/engine.jpg'
 import ServiceDetail from './ServiceDetail/ServiceDetail';
 import carwash from '../../../images/carwash.jpg'
 import interior from '../../../images/interior.jpg'
 
-const infoData = [
-    {
-        title: 'Engine Work',
-
-        image: serviceImg,
-
-    },
-    {
-        title: 'Super Car Wash',
-
-        image: carwash,
-
-    },
-    {
-        title: 'Interior Design Makeover',
-
-        image: interior,
-
-    }
-]
-
 
 const Service = () => {
+    const [infoData, setInfoData] = useState([])
+    fetch("http://localhost:5000/services")
+    .then(res => res.json())
+    .then(data =>setInfoData(data))
     return (
         <section className="mt-5">
             <div className="text-center mt-5">
@@ -38,6 +21,7 @@ const Service = () => {
                         infoData.map(service => <ServiceDetail service={service}></ServiceDetail>)
                     }
                 </div>
+              
             </div>
         </section>
     );
