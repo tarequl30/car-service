@@ -4,7 +4,10 @@ import { useAuth } from '../../../Contexts/AuthContext';
 import logo from '../../../images/482.jpg'
 
 const Navbar = () => {
-  const {currentUser} = useAuth()
+  const {currentUser, signOut} = useAuth()
+  const handleSignOut = () => {
+    signOut()
+  }
     return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light" >
       <div className="container-fluid">
@@ -21,7 +24,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               {
-                currentUser? <Link to="/">Log Out</Link> : <Link to="/login">Login</Link>
+                currentUser? <Link onClick={handleSignOut} to="/">Log Out</Link> : <Link to="/login">Login</Link>
               }
             </li>
           </ul>

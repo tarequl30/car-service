@@ -53,7 +53,7 @@ const ServiceDetail = ({service}) => {
                                 type="text"
                                 className="border60"
                                 {...register("name")}
-                                placeholder="example chowdhury..."
+                                placeholder="Your Name"
                                 required
                             ></Form.Control>
                         </Form.Group>
@@ -81,9 +81,9 @@ const ServiceDetail = ({service}) => {
             </Card>
         </ReactModal>
             <img src={service.image} alt="" width="80%" height="300px"/>
-            <h5 className="mt-3">{service.name}</h5>
-            <p className="text-secondary mt-5">{service.description}</p>
-            <p className="text-secondary mt-5">{service.price}</p> 
+            <h5 className="mt-2">{service.name}</h5>
+            <p className="text-secondary mt-2">{service.description}</p>
+            <p className="text-secondary mt-2">${service.price}</p> 
             <button onClick={openModal} className="btn btn-success">Book Service</button>
         </div>
     );

@@ -66,12 +66,12 @@ const AddService = () => {
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group className="mt-3">
-                            <Form.Label>Description</Form.Label>
+                            <Form.Label>Location</Form.Label>
                             <Form.Control
                                 type="text"
                                 className="border60"
                                 {...register("description")}
-                                placeholder="example@example.com..."
+                                placeholder="Location"
                                 required
                             ></Form.Control>
                         </Form.Group>

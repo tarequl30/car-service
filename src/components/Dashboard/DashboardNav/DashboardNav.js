@@ -1,8 +1,11 @@
 import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
+import { useWatch } from 'react-hook-form';
 import { NavLink } from 'react-router-dom';
-
+import {useAuth} from "../../../Contexts/AuthContext"
 const DashboardNav = () => {
+    const {currentUser} = useAuth()
+    console.log(currentUser)
     return (
         <Navbar
         fixed="top"
@@ -32,14 +35,6 @@ const DashboardNav = () => {
                 >
                     ORDER LIST
                 </NavLink>
-
-                <NavLink
-                    to="/dashboard/addService"
-                    className="btn mt-2 me-1"
-                    activeClassName="btn-primary"
-                >
-                    ADD SERVICE
-                </NavLink>
                 <NavLink
                     to="/dashboard/reviews"
                     className="btn mt-2 me-1"
@@ -48,12 +43,21 @@ const DashboardNav = () => {
                     REVIEWS
                 </NavLink>
                 <NavLink
+                    to="/dashboard/addService"
+                    className="btn mt-2 me-1"
+                    activeClassName="btn-primary"
+                >
+                    ADD SERVICE
+                </NavLink>
+                
+                <NavLink
                     to="/dashboard/manageService"
                     className="btn mt-2 me-1"
                     activeClassName="btn-primary"
                 >
                     MANAGE SERVICE
                 </NavLink>
+                
                 
             </Nav>
         </Navbar.Collapse>

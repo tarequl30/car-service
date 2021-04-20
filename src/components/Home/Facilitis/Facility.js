@@ -5,19 +5,19 @@ const facility = [
     {
         title: '24*7 Customer Services',
         image: <i className="bi bi-tools"></i>,
-        price: 125
+        desc:" 009854555568"
 
     },
     {
         title: 'Visit Our Location',
         image: <i className="bi bi-tools"></i>,
-        price: 299
+        desc: "Chittagong, Bangladesh"
 
     },
     {
         title: 'Contact Us Now',
         image: <i className="bi bi-tools"></i>,
-        price: 185
+        desc: 'info@carservice.com'
 
     }
 ]
