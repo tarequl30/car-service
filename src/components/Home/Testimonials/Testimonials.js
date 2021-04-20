@@ -27,7 +27,7 @@ import Testimonial from '../Testimonial/Testimonial';
 
 const Testimonials = () => {
     const [testimonialData, setTestimonialData] = useState([])
-    fetch("http://localhost:5000/reviews")
+    fetch("https://polar-bayou-98466.herokuapp.com/reviews")
     .then(res => res.json())
     .then(data =>setTestimonialData(data))
     return (

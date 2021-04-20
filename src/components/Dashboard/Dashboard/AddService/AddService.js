@@ -24,7 +24,7 @@ const AddService = () => {
           description: data.description,
           image,
       }
-      fetch("http://localhost:5000/addService", {
+      fetch("https://polar-bayou-98466.herokuapp.com/addService", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

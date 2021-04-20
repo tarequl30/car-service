@@ -38,7 +38,7 @@ const Reviews = () => {
             setMessage("")
             setError("")
             setLoading(true)
-            await fetch("http://localhost:5000/addReview", {
+            await fetch("https://polar-bayou-98466.herokuapp.com/addReview", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newReview),

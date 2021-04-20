@@ -2,13 +2,13 @@ import React from 'react';
 
 const ServiceCard = ({service}) => {
     const handleClick = () => {
-        fetch(`http://localhost:5000/delete-a-service/${service._id}`)
+        fetch(`https://polar-bayou-98466.herokuapp.com/delete-a-service/${service._id}`)
         .then(res => res.json())
         .then(result => console.log(result))
     }
     return (
         <div>
-            <table class="table">
+            <table className="table">
   <thead>
     <tr>
       <th scope="col">Service Name</th>

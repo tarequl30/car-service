@@ -13,7 +13,7 @@ const ServiceDetail = ({service}) => {
           serviceName: service.name,
           price: service.price
       }
-      fetch("http://localhost:5000/addOrder", {
+      fetch("https://polar-bayou-98466.herokuapp.com/addOrder", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

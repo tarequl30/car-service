@@ -7,7 +7,7 @@ import interior from '../../../images/interior.jpg'
 
 const Service = () => {
     const [infoData, setInfoData] = useState([])
-    fetch("http://localhost:5000/services")
+    fetch("https://polar-bayou-98466.herokuapp.com/services")
     .then(res => res.json())
     .then(data =>setInfoData(data))
     return (

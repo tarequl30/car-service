@@ -3,12 +3,12 @@ import SingleOrder from './SingleOrder';
 
 const OrderList = () => {
     const [order, setOrder] = useState([])
-    fetch("http://localhost:5000/orders")
+    fetch("https://polar-bayou-98466.herokuapp.com/orders")
     .then(res => res.json())
     .then(data =>setOrder(data))
     return (
         <div>
-            <table class="table">
+            <table className="table">
   <thead>
     <tr>
     
